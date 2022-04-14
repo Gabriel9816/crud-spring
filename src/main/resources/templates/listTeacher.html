@@ -46,7 +46,7 @@
             <tr>
               <th scope="col">Id</th>
               <th scope="col">Nome</th>
-              <th scope="col">Disciplina</th>
+              <th scope="col">Turma</th>
               <th scope="col">Email</th>
               <th scope="col">Senha</th>
               <th scope="col">Ações</th>
@@ -56,7 +56,7 @@
             <tr th:each="teacher: ${listTeachers}">
               <th th:text="${teacher.id}" scope="row"></th>
               <th th:text="${teacher.name}" scope="row"></th>
-              <th th:text="${teacher.disciplina}" scope="row"></th>
+              <th th:text="${teacher.turma}" scope="row"></th>
               <th th:text="${teacher.email}" scope="row"></th>
               <th th:text="${teacher.password}" scope="row"></th>
               <th>
@@ -81,9 +81,9 @@
                               placeholder="Informe o nome" />
                           </div>
                           <div class="mb-3">
-                            <label for="editDisciplinaT" class="col-form-label">Disciplina</label>
-                            <input th:field="*{disciplina}" type="text" class="form-control" id="editDisciplinaT"
-                              placeholder="Informe o email" />
+                            <label for="editturmaT" class="col-form-label">Turma</label>
+                            <input th:field="*{turma}" type="text" class="form-control" id="editturmaT"
+                              placeholder="Informe sua turma" />
                           </div>
                           <div class="mb-3">
                             <label for="editEmailT" class="col-form-label">Email</label>

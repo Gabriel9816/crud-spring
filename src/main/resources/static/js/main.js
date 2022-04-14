@@ -5,10 +5,10 @@ function editStudent(id, name, email, password) {
     document.getElementById("editPassword").value = password;
 }
 
-function editTeacher(id, name, disciplina, email, password) {
+function editTeacher(id, name, turma, email, password) {
     document.getElementById("editModalTeacherForm").action = "/teacher/update/" + id;
     document.getElementById("editNameT").value = name;
-	document.getElementById("editDisciplinaT").value = disciplina;
+	document.getElementById("editturmaT").value = turma;
     document.getElementById("editEmailT").value = email;
     document.getElementById("editPasswordT").value = password;
 }
