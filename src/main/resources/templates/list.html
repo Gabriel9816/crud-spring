@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-  <title>Alunos</title>
+  <title>Listando Alunos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8" />
   <script type="text/javascript" th:src="@{/js/main.js}"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -20,17 +20,25 @@
       <img th:src="@{/image/ifms.png}" alt="logo" style="width:40px;">
     </a>
     <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" th:href="@{/student/listar}">Listar Estudantes</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Listagem
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" th:href="@{/student/listar}">Listar Estudantes</a>
+          <a class="dropdown-item" th:href="@{/teacher/listar}">Listar Professores</a>
+          <a class="dropdown-item" th:href="@{/turma/listar}">Listar Turmas</a>
+        </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" th:href="@{/teacher/listar}">Listar Professores</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" th:href="@{/student/cadastrar}">Cadastrar Estudantes</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" th:href="@{/teacher/cadastrar}">Cadastrar Professores</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Cadastro
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" th:href="@{/student/cadastrar}">Cadastrar Estudantes</a>
+          <a class="dropdown-item" th:href="@{/teacher/cadastrar}">Cadastrar Professores</a>
+          <a class="dropdown-item" th:href="@{/turma/cadastrar}">Cadastrar Turmas</a>
+        </div>
       </li>
     </ul>
   </nav>

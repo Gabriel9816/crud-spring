@@ -18,10 +18,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class Turma {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     UUID id;
-    String nome;
+    String name;
+
     @OneToMany(mappedBy = "turma")    
     List<Teacher> teachers;
     
